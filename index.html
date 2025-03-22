@@ -1,11 +1,140 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>NicolaLepore4.github.io</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicola Lepore | GitHub Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #2d3436;
+            --secondary-color: #0984e3;
+            --text-color: #2d3436;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 0;
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            border: 1px solid #ddd;
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-tech {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            background-color: #f8f9fa;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello World</h1>
-    <p>I'm hosted with GitHub Pages.</p>
-</body>
+    <header>
+        <div class="container">
+            <h1>Nicola Lepore</h1>
+            <p>Developer & Open Source Enthusiast</p>
+            <nav>
+                <a href="https://github.com/NicolaLepore4" target="_blank">GitHub</a> |
+                <a href="#projects">Projects</a> |
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
 
+    <main class="container">
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Replace these with your actual projects -->
+                <article class="project-card">
+                    <h3>Project Name 1</h3>
+                    <p>Brief description of the project and its main purpose. Highlight key features and technologies used.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">SQLite</span>
+                    </div>
+                    <a href="REPLACE_WITH_PROJECT_URL" target="_blank">View Project →</a>
+                </article>
+
+                <article class="project-card">
+                    <h3>Project Name 2</h3>
+                    <p>Brief description of the project and its main purpose. Highlight key features and technologies used.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                    </div>
+                    <a href="REPLACE_WITH_PROJECT_URL" target="_blank">View Project →</a>
+                </article>
+
+                <!-- Add more project cards as needed -->
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Feel free to reach out for collaborations or questions:</p>
+            <ul>
+                <li>GitHub: <a href="https://github.com/NicolaLepore4" target="_blank">github.com/NicolaLepore4</a></li>
+                <li>Email: [Your professional email]</li>
+                <!-- Add other contact methods as needed -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 Nicola Lepore. Powered by GitHub Pages</p>
+    </footer>
+</body>
 </html>
