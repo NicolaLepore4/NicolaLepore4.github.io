@@ -223,7 +223,7 @@
         <img src="https://avatars.githubusercontent.com/u/65071691?v=4" alt="Nicola Lepore" class="profile-img" />
         <h1>Nicola Lepore</h1>
         <p class="bio">
-            Cybersecurity Student & Developer with a passion for building secure, intelligent systems. Master's student in Computer Engineering focused on malware detection and cryptographic systems. Enthusiast exploring new frontiers in cybersecurity and AI.
+            Cybersecurity enthusiast & Developer with a passion for building secure, intelligent systems. Master's student in CyberSecurity focused on malware detection and AI.
         </p>
         <div class="contact-links">
             <a href="https://www.linkedin.com/in/nicola-lepore-29736a26a" target="_blank">
@@ -294,35 +294,27 @@
       </div>
     </section>
 
-    <aside class="sidebar">
-      <h3>Technical Skills</h3>
-      <ul class="tech-list">
-        <li class="tech-item"><i class="fab fa-python"></i> Python</li>
-        <li class="tech-item"><i class="fab fa-java"></i> Java</li>
-        <li class="tech-item"><i class="fas fa-shield-alt"></i> C++</li>
-        <li class="tech-item"><i class="fas fa-brain"></i> Machine Learning</li>
-        <li class="tech-item"><i class="fas fa-lock"></i> Cryptography</li>
-      </ul>
-      <div class="badge-container">
-        <div class="github-badge">
-          <h4>GitHub Stats</h4>
-          <img src="https://ghchart.rshah.org/NicolaLepore4" alt="GitHub Contributions" />
-          <p>Repositories: <span id="github-repos">Loading...</span></p>
-        </div>
+    <section id="github-stats">
+      <div class="github-badge">
+        <h4>GitHub Stats</h4>
+        <img src="https://ghchart.rshah.org/NicolaLepore4" alt="GitHub Contributions" />
+        <p>Repositories: <span id="github-repos">Loading...</span></p>
       </div>
-    </aside>
-  </main>
+    </section>
+  </div>
+</div>
+</main>
 
-  <footer>
-    <p>© 2025 Nicola Lepore. Powered by GitHub Pages</p>
-  </footer>
+<footer>
+<p>© 2025 Nicola Lepore. Powered by GitHub Pages</p>
+</footer>
 
-  <script>
-    fetch('https://api.github.com/users/NicolaLepore4')
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById('github-repos').textContent = data.public_repos;
-      });
-  </script>
+<script>
+fetch('https://api.github.com/users/NicolaLepore4')
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById('github-repos').textContent = data.public_repos;
+  });
+</script>
 </body>
 </html>
