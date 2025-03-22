@@ -1,252 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicola Lepore | Cybersecurity Student & Developer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-bg: #0a192f;
-            --secondary-bg: #172a45;
-            --accent-color: #64ffda;
-            --text-primary: #ccd6f6;
-            --text-secondary: #8892b0;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nicola Lepore | Cybersecurity Student & Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root {
+      --primary-bg: #0a192f;
+      --secondary-bg: #172a45;
+      --accent-color: #64ffda;
+      --text-primary: #ccd6f6;
+      --text-secondary: #8892b0;
+    }
 
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            background-color: var(--primary-bg);
-            color: var(--text-primary);
-        }
+    body {
+      margin: 0;
+      background-color: var(--primary-bg);
+      color: var(--text-primary);
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-            display: grid;
-            grid-template-columns: 3fr 1fr;
-            gap: 2rem;
-        }
+    /* Wrapper centrale per contenuti e header */
+    .wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
 
-        header {
-            background: linear-gradient(45deg, var(--primary-bg), var(--secondary-bg));
-            padding: 4rem 0;
-            text-align: center;
-            position: relative;
-        }
+    header {
+      background: linear-gradient(45deg, var(--primary-bg), var(--secondary-bg));
+      padding: 4rem 0;
+      text-align: center;
+    }
 
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 3px solid var(--accent-color);
-            margin-bottom: 1.5rem;
-        }
+    header .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid var(--accent-color);
+      margin-bottom: 1.5rem;
+    }
 
-        .bio {
-            max-width: 600px;
-            margin: 2rem auto;
-            color: var(--text-secondary);
-        }
+    header h1 {
+      margin: 0.5rem 0;
+      font-size: 2.5rem;
+    }
 
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
+    header p.bio {
+      max-width: 600px;
+      margin: 1.5rem auto;
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+    }
 
-        .project-card {
-            background: var(--secondary-bg);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 1px solid #303C55;
-            transition: transform 0.3s ease;
-        }
+    .contact-links {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
 
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
+    .contact-links a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
 
-        .sidebar {
-            padding: 1rem;
-            background: var(--secondary-bg);
-            border-radius: 8px;
-            height: fit-content;
-            position: sticky;
-            top: 2rem;
-        }
+    .contact-links a:hover {
+      color: #fff;
+    }
 
-        .badge-container {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
+    main {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 2rem;
+      margin: 3rem 0;
+    }
 
-        .github-badge {
-            background: #161b22;
-            padding: 1rem;
-            border-radius: 8px;
-            text-align: center;
-            border: 1px solid #303C55;
-        }
+    section#projects {
+      margin-bottom: 2rem;
+    }
 
-        .tech-list {
-            list-style: none;
-            padding: 0;
-        }
+    section#projects h2 {
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
 
-        .tech-item {
-            margin: 0.5rem 0;
-            padding: 0.5rem;
-            background: var(--primary-bg);
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
 
-        a {
-            color: var(--accent-color);
-            text-decoration: none;
-        }
+    .project-card {
+      background: var(--secondary-bg);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid #303c55;
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
-        footer {
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-            background: var(--secondary-bg);
-        }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
 
-        .contact-links {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            margin-top: 1rem;
-        }
+    .project-card h3 {
+      margin-top: 0;
+    }
 
-        @media (max-width: 768px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-            .sidebar {
-                position: static;
-            }
-        }
-    </style>
+    .project-tech {
+      margin: 1rem 0;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .project-tech .tech-tag {
+      background: var(--primary-bg);
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+
+    .project-card a {
+      margin-top: auto;
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .project-card a:hover {
+      color: #fff;
+    }
+
+    aside.sidebar {
+      background: var(--secondary-bg);
+      padding: 1.5rem;
+      border-radius: 8px;
+      height: fit-content;
+      position: sticky;
+      top: 2rem;
+    }
+
+    aside.sidebar h3 {
+      margin-top: 0;
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .tech-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .tech-item {
+      margin: 0.5rem 0;
+      padding: 0.5rem;
+      background: var(--primary-bg);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .badge-container {
+      margin-top: 2rem;
+    }
+
+    .github-badge {
+      background: #161b22;
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+      border: 1px solid #303c55;
+    }
+
+    .github-badge img {
+      max-width: 100%;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+      background: var(--secondary-bg);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+      aside.sidebar {
+        position: static;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            
-            <img src="https://avatars.githubusercontent.com/u/65071691?v=4" alt="Nicola Lepore" class="profile-img">
-            <h1>Nicola Lepore</h1>
-            <p class="bio">
-                Cybersecurity Student & Developer with a passion for building secure, intelligent systems. 
-                Master's student in Computer Engineering with focus on malware detection and cryptographic systems. 
-                Open-source contributor and tech enthusiast constantly exploring new frontiers in cybersecurity and AI.
-            </p>
-            <div class="contact-links">
-                <a href="https://www.linkedin.com/in/nicola-lepore-29736a26a" target="_blank">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-                <a href="mailto:nicolalepore0@gmail.com">
-                    <i class="fas fa-envelope"></i> Email
-                </a>
-            </div>
+  <header>
+    <div class="wrapper">
+      <img src="https://avatars.githubusercontent.com/u/65071691?v=4" alt="Nicola Lepore" class="profile-img" />
+      <h1>Nicola Lepore</h1>
+      <p class="bio">
+        Cybersecurity Student & Developer with a passion for building secure, intelligent systems. Master's student in Computer Engineering focused on malware detection and cryptographic systems. Open-source contributor and tech enthusiast exploring new frontiers in cybersecurity and AI.
+      </p>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/nicola-lepore-29736a26a" target="_blank">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="mailto:nicolalepore0@gmail.com">
+          <i class="fas fa-envelope"></i> Email
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrapper">
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>Malware Detection System</h3>
+          <p>
+            AI-powered malware detection using CICAndAdGMal2017 dataset. Feature engineering and machine learning models for cybersecurity applications.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Jupyter</span>
+            <span class="tech-tag">Scikit-learn</span>
+          </div>
+          <a href="https://github.com/NicolaLepore4/Malware-Detection-based-on-CICAndAdGMal2017-dataset" target="_blank">View Project →</a>
+        </article>
+
+        <article class="project-card">
+          <h3>Neural Network Malware Recognition</h3>
+          <p>
+            Advanced malware recognition system using Adversarial Robustness Toolkit (ART) for neural network training.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">TensorFlow</span>
+            <span class="tech-tag">ART</span>
+          </div>
+          <a href="https://github.com/NicolaLepore4/Training-Neural-Network-for-malware-recognition-using-ART" target="_blank">View Project →</a>
+        </article>
+
+        <article class="project-card">
+          <h3>Secure TEA Encryption</h3>
+          <p>
+            Hardware implementation of Tiny Encryption Algorithm (TEA) using SystemVerilog.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">SystemVerilog</span>
+            <span class="tech-tag">Cryptography</span>
+            <span class="tech-tag">FPGA</span>
+          </div>
+          <a href="https://github.com/NicolaLepore4/project_930II_23.24_tea_enc" target="_blank">View Project →</a>
+        </article>
+
+        <article class="project-card">
+          <h3>Secure Bulletin Board System</h3>
+          <p>
+            Cryptographic bulletin board system implementing end-to-end encryption and secure communications.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">C++</span>
+            <span class="tech-tag">Cryptography</span>
+            <span class="tech-tag">OpenSSL</span>
+          </div>
+          <a href="https://github.com/NicolaLepore4/Applied-Cryptography-Bulletin-Board-System" target="_blank">View Project →</a>
+        </article>
+      </div>
+    </section>
+
+    <aside class="sidebar">
+      <h3>Technical Skills</h3>
+      <ul class="tech-list">
+        <li class="tech-item"><i class="fab fa-python"></i> Python</li>
+        <li class="tech-item"><i class="fab fa-java"></i> Java</li>
+        <li class="tech-item"><i class="fas fa-shield-alt"></i> C++</li>
+        <li class="tech-item"><i class="fas fa-brain"></i> Machine Learning</li>
+        <li class="tech-item"><i class="fas fa-lock"></i> Cryptography</li>
+      </ul>
+      <div class="badge-container">
+        <div class="github-badge">
+          <h4>GitHub Stats</h4>
+          <img src="https://ghchart.rshah.org/NicolaLepore4" alt="GitHub Contributions" />
+          <p>Repositories: <span id="github-repos">Loading...</span></p>
         </div>
-    </header>
+      </div>
+    </aside>
+  </main>
 
-    <main class="container">
-        <div>
-            <section id="projects">
-                <h2>Featured Projects</h2>
-                <div class="projects-grid">
-                    <article class="project-card">
-                        <h3>Malware Detection System</h3>
-                        <p>AI-powered malware detection using CICAndAdGMal2017 dataset. Feature engineering and machine learning models for cybersecurity applications.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Jupyter</span>
-                            <span class="tech-tag">Scikit-learn</span>
-                        </div>
-                        <a href="https://github.com/NicolaLepore4/Malware-Detection-based-on-CICAndAdGMal2017-dataset" target="_blank">View Project →</a>
-                    </article>
+  <footer>
+    <p>© 2025 Nicola Lepore. Powered by GitHub Pages</p>
+  </footer>
 
-                    <article class="project-card">
-                        <h3>Neural Network Malware Recognition</h3>
-                        <p>Advanced malware recognition system using Adversarial Robustness Toolkit (ART) for neural network training.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">TensorFlow</span>
-                            <span class="tech-tag">ART</span>
-                        </div>
-                        <a href="https://github.com/NicolaLepore4/Training-Neural-Network-for-malware-recognition-using-ART" target="_blank">View Project →</a>
-                    </article>
-
-                    <article class="project-card">
-                        <h3>Secure TEA Encryption</h3>
-                        <p>Hardware implementation of Tiny Encryption Algorithm (TEA) using SystemVerilog.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">SystemVerilog</span>
-                            <span class="tech-tag">Cryptography</span>
-                            <span class="tech-tag">FPGA</span>
-                        </div>
-                        <a href="https://github.com/NicolaLepore4/project_930II_23.24_tea_enc" target="_blank">View Project →</a>
-                    </article>
-
-                    <article class="project-card">
-                        <h3>Secure Bulletin Board System</h3>
-                        <p>Cryptographic bulletin board system implementing end-to-end encryption and secure communications.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">C++</span>
-                            <span class="tech-tag">Cryptography</span>
-                            <span class="tech-tag">OpenSSL</span>
-                        </div>
-                        <a href="https://github.com/NicolaLepore4/Applied-Cryptography-Bulletin-Board-System" target="_blank">View Project →</a>
-                    </article>
-                </div>
-            </section>
-        </div>
-
-        <div class="sidebar">
-            <div class="tech-section">
-                <h3>Technical Skills</h3>
-                <ul class="tech-list">
-                    <li class="tech-item"><i class="fab fa-python"></i> Python</li>
-                    <li class="tech-item"><i class="fab fa-java"></i> Java</li>
-                    <li class="tech-item"><i class="fas fa-shield-alt"></i> C++</li>
-                    <li class="tech-item"><i class="fas fa-brain"></i> Machine Learning</li>
-                    <li class="tech-item"><i class="fas fa-lock"></i> Cryptography</li>
-                </ul>
-            </div>
-
-            <div class="badge-container">
-                <div class="github-badge">
-                    <h4>GitHub Stats</h4>
-                    <img src="https://ghchart.rshah.org/NicolaLepore4" alt="GitHub Contributions">
-                    <p>Repositories: <span id="github-repos">Loading...</span></p>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <p>© 2025 Nicola Lepore. Powered by GitHub Pages</p>
-    </footer>
-
-    <script>
-        // GitHub API integration for badges
-        fetch('https://api.github.com/users/NicolaLepore4')
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('github-followers').textContent = data.followers;
-                document.getElementById('github-repos').textContent = data.public_repos;
-            });
-    </script>
+  <script>
+    fetch('https://api.github.com/users/NicolaLepore4')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('github-repos').textContent = data.public_repos;
+      });
+  </script>
 </body>
 </html>
