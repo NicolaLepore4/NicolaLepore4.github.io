@@ -294,27 +294,44 @@
       </div>
     </section>
 
+    <aside class="sidebar">
+      <h3>Technical Skills</h3>
+      <ul class="tech-list">
+        <li class="tech-item"><i class="fab fa-python"></i> Python</li>
+        <li class="tech-item"><i class="fab fa-java"></i> Java</li>
+        <li class="tech-item"><i class="fas fa-shield-alt"></i> C++</li>
+        <li class="tech-item"><i class="fas fa-brain"></i> Machine Learning</li>
+        <li class="tech-item"><i class="fas fa-lock"></i> Cryptography</li>
+      </ul>
+      <div class="badge-container">
+        <div class="github-badge">
+          <h4>GitHub Stats</h4>
+          <img src="https://ghchart.rshah.org/NicolaLepore4" alt="GitHub Contributions" />
+          <p>Repositories: <span id="github-repos">Loading...</span></p>
+        </div>
+      </div>
+    </aside>
+
     <section id="github-stats">
+      <h2>GitHub Stats</h2>
       <div class="github-badge">
-        <h4>GitHub Stats</h4>
+        <h4>GitHub Contributions</h4>
         <img src="https://ghchart.rshah.org/NicolaLepore4" alt="GitHub Contributions" />
         <p>Repositories: <span id="github-repos">Loading...</span></p>
       </div>
     </section>
-  </div>
-</div>
-</main>
+  </main>
 
-<footer>
-<p>© 2025 Nicola Lepore. Powered by GitHub Pages</p>
-</footer>
+  <footer>
+    <p>© 2025 Nicola Lepore. Powered by GitHub Pages</p>
+  </footer>
 
-<script>
-fetch('https://api.github.com/users/NicolaLepore4')
-  .then(response => response.json())
-  .then(data => {
-    document.getElementById('github-repos').textContent = data.public_repos;
-  });
-</script>
+  <script>
+    fetch('https://api.github.com/users/NicolaLepore4')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('github-repos').textContent = data.public_repos;
+      });
+  </script>
 </body>
 </html>
